@@ -74,8 +74,53 @@
 
 
 
-\title{A Metaheuristic for Bilevel Optimization}
-\author{Jesús Adolfo Mejía de Dios}
-\newcommand{\supervisor}{Dr. Super visor}
+
 
 \usetikzlibrary{shapes.geometric, arrows, positioning}
+
+
+\renewcommand{\maketitle}{
+\makeatletter
+\begin{titlepage}
+\begin{figure}
+\vspace{-4.5cm}
+\begin{tikzpicture}[scale=0.3]
+    \hspace{-4cm}
+    \fill[uvblue] (0,0) rectangle (90,14);
+    \node[text, align=center] at (42,8.5) {\color{white} \scshape \huge Universidad Veracruzana};
+\usepackage[utf8]{inputenc}
+    \node[text] at (42,5.5) {\color{white} \scshape \large Centro de Investigación en Inteligencia Artificial};
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+    \coordinate (A) at (0,0.8);
+    \coordinate (B) at (0,14);
+    \coordinate (C) at (9,14);
+    \coordinate (D) at (20,0.8);
+    \fill[black!20!uvgreen!] (A)-- coordinate[pos=.6] (AB)-- (B)--(C)--(D);
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+    \fill[white] (0,0.5) rectangle (90,0.8);
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+    \node at (7.3, 7.5) {\includegraphics[width=2cm]{img/uv-mono.pdf}};
+\end{tikzpicture}
+\end{figure}
+    \centering
+    \vspace*{2cm}
+    {\scshape\Large Thesis\par}
+    \vspace{1.5cm}
+    {\huge\bfseries \Title\par}
+    \vspace{2cm}
+    {\Large\itshape \Author \par}
+    \vfill
+    supervised by\par
+    \supervisor
+
+    \vfill
+
+% Bottom of the page
+    {\large \today\par}
+
+\end{titlepage}
+\makeatother
+}
