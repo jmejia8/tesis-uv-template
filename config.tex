@@ -1,0 +1,81 @@
+
+\usepackage{layout} % show a page layout
+\usepackage{blindtext}  % dummy text
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb,}
+\usepackage[spanish,mexico]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{titlesec,color}
+\usepackage{tikz}
+\usepackage{palatino} % font family
+\usepackage{boldline} % lines
+\usepackage{setspace} % line spacing
+\usepackage{fancyhdr} % headers
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% line spacing
+\setstretch{1.15}
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+\definecolor{myblue}{HTML}{002B51}
+\definecolor{uvblue}{RGB}{0,91,171}
+\definecolor{uvgreen}{RGB}{0,171,78}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% headers
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\headrule}{\hbox to\headwidth{%
+  \color{black!10!uvgreen!}\leaders\hrule height \headrulewidth\hfill}}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\color{myblue}\leftmark}
+\fancyfoot[LO,RE]{\thepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newcommand{\hsp}{\hspace{20pt}}
+
+\titleformat
+{\chapter} % command
+[display] % shape
+{\bfseries\huge\itshape\color{myblue}} % format
+{\chaptername \ \thechapter} % label
+{0.5ex} % sep
+{
+    {\rule{\textwidth}{1pt}}
+    \vspace{1ex}
+    \centering
+} % before-code
+[
+\vspace{-0.5ex}%
+\rule{\textwidth}{0.3pt}
+] % after-code
+
+\titleformat{\section}[hang]{\color{uvblue}\Large\bfseries\sffamily}{\thesection\hsp}{0pt}{\Large\bfseries}
+\titleformat{\subsection}[hang]{\color{uvgreen}\large\bfseries\sffamily}{\thesubsection\hsp}{0pt}{\large\bfseries}
+
+
+
+\title{A Metaheuristic for Bilevel Optimization}
+\author{Jesús Adolfo Mejía de Dios}
+\newcommand{\supervisor}{Dr. Super visor}
+
+\usetikzlibrary{shapes.geometric, arrows, positioning}
